@@ -1,0 +1,202 @@
+[
+  {
+    "id": "s1",
+    "title": "Modern React Patterns",
+    "speaker": "Danielle Cohen",
+    "track": "Frontend",
+    "startTime": "2025-05-20T09:00:00.00Z",
+    "endTime": "2025-05-20T09:45:00Z",
+    "room": "Hall A",
+    "description": "Learn modern patterns for building large-scale React applications."
+  },
+  {
+    "id": "s2",
+    "title": "Advanced TypeScript Techniques",
+    "speaker": "Michael Zhang",
+    "track": "Frontend",
+    "startTime": "2025-05-20T10:00:00.00Z",
+    "endTime": "2025-05-20T10:45:00Z",
+    "room": "Hall A",
+    "description": "Deep dive into advanced TypeScript features and type system."
+  },
+  {
+    "id": "s3",
+    "title": "CSS Grid and Flexbox Mastery",
+    "speaker": "Sarah Johnson",
+    "track": "Frontend",
+    "startTime": "2025-05-20T11:00:00.00Z",
+    "endTime": "2025-05-20T11:45:00Z",
+    "room": "Hall B",
+    "description": "Master modern CSS layout techniques for responsive design."
+  },
+  {
+    "id": "s4",
+    "title": "Next.js Performance Optimization",
+    "speaker": "Alex Rivera",
+    "track": "Frontend",
+    "startTime": "2025-05-20T13:00:00.00Z",
+    "endTime": "2025-05-20T13:45:00Z",
+    "room": "Hall A",
+    "description": "Optimize your Next.js applications for maximum performance."
+  },
+  {
+    "id": "s5",
+    "title": "Web Accessibility Best Practices",
+    "speaker": "Emma Wilson",
+    "track": "Frontend",
+    "startTime": "2025-05-20T14:00:00.00Z",
+    "endTime": "2025-05-20T14:45:00Z",
+    "room": "Hall B",
+    "description": "Build inclusive web applications that work for everyone."
+  },
+  {
+    "id": "s6",
+    "title": "Microservices Architecture",
+    "speaker": "James Anderson",
+    "track": "Backend",
+    "startTime": "2025-05-20T09:00:00.00Z",
+    "endTime": "2025-05-20T09:45:00Z",
+    "room": "Hall C",
+    "description": "Design and implement scalable microservices architectures."
+  },
+  {
+    "id": "s7",
+    "title": "GraphQL API Design",
+    "speaker": "Lisa Chen",
+    "track": "Backend",
+    "startTime": "2025-05-20T10:00:00.00Z",
+    "endTime": "2025-05-20T10:45:00Z",
+    "room": "Hall C",
+    "description": "Build efficient and flexible APIs with GraphQL."
+  },
+  {
+    "id": "s8",
+    "title": "Database Optimization Strategies",
+    "speaker": "Robert Martinez",
+    "track": "Backend",
+    "startTime": "2025-05-20T11:00:00.00Z",
+    "endTime": "2025-05-20T11:45:00Z",
+    "room": "Hall C",
+    "description": "Optimize database queries and improve application performance."
+  },
+  {
+    "id": "s9",
+    "title": "Serverless with AWS Lambda",
+    "speaker": "Nina Patel",
+    "track": "Backend",
+    "startTime": "2025-05-20T13:00:00.00Z",
+    "endTime": "2025-05-20T13:45:00Z",
+    "room": "Hall C",
+    "description": "Build scalable serverless applications with AWS Lambda."
+  },
+  {
+    "id": "s10",
+    "title": "API Security Best Practices",
+    "speaker": "David Kim",
+    "track": "Backend",
+    "startTime": "2025-05-20T14:00:00.00Z",
+    "endTime": "2025-05-20T14:45:00Z",
+    "room": "Hall C",
+    "description": "Secure your APIs against common vulnerabilities and attacks."
+  },
+  {
+    "id": "s11",
+    "title": "Kubernetes in Production",
+    "speaker": "Tom Harris",
+    "track": "DevOps",
+    "startTime": "2025-05-20T09:00:00.00Z",
+    "endTime": "2025-05-20T09:45:00Z",
+    "room": "Hall D",
+    "description": "Deploy and manage containerized applications with Kubernetes."
+  },
+  {
+    "id": "s12",
+    "title": "CI/CD Pipeline Automation",
+    "speaker": "Rachel Green",
+    "track": "DevOps",
+    "startTime": "2025-05-20T10:00:00.00Z",
+    "endTime": "2025-05-20T10:45:00Z",
+    "room": "Hall D",
+    "description": "Automate your deployment pipeline for faster releases."
+  },
+  {
+    "id": "s13",
+    "title": "Infrastructure as Code with Terraform",
+    "speaker": "Chris Brown",
+    "track": "DevOps",
+    "startTime": "2025-05-20T11:00:00.00Z",
+    "endTime": "2025-05-20T11:45:00Z",
+    "room": "Hall D",
+    "description": "Manage cloud infrastructure using Terraform best practices."
+  },
+  {
+    "id": "s14",
+    "title": "Monitoring and Observability",
+    "speaker": "Amanda Lee",
+    "track": "DevOps",
+    "startTime": "2025-05-20T13:00:00.00Z",
+    "endTime": "2025-05-20T13:45:00Z",
+    "room": "Hall D",
+    "description": "Implement comprehensive monitoring for distributed systems."
+  },
+  {
+    "id": "s15",
+    "title": "Machine Learning Fundamentals",
+    "speaker": "Dr. Kevin Wu",
+    "track": "AI",
+    "startTime": "2025-05-20T09:00:00.00Z",
+    "endTime": "2025-05-20T09:45:00Z",
+    "room": "Hall E",
+    "description": "Introduction to machine learning concepts and algorithms."
+  },
+  {
+    "id": "s16",
+    "title": "Building AI-Powered Applications",
+    "speaker": "Sophia Taylor",
+    "track": "AI",
+    "startTime": "2025-05-20T10:00:00.00Z",
+    "endTime": "2025-05-20T10:45:00Z",
+    "room": "Hall E",
+    "description": "Integrate AI capabilities into your web applications."
+  },
+  {
+    "id": "s17",
+    "title": "Natural Language Processing",
+    "speaker": "Dr. Marcus Johnson",
+    "track": "AI",
+    "startTime": "2025-05-20T11:00:00.00Z",
+    "endTime": "2025-05-20T11:45:00Z",
+    "room": "Hall E",
+    "description": "Process and analyze text data using NLP techniques."
+  },
+  {
+    "id": "s18",
+    "title": "Computer Vision with Deep Learning",
+    "speaker": "Jennifer Park",
+    "track": "AI",
+    "startTime": "2025-05-20T13:00:00.00Z",
+    "endTime": "2025-05-20T13:45:00Z",
+    "room": "Hall E",
+    "description": "Build image recognition systems using neural networks."
+  },
+  {
+    "id": "s19",
+    "title": "Ethical AI Development",
+    "speaker": "Dr. Ahmed Hassan",
+    "track": "AI",
+    "startTime": "2025-05-20T14:00:00.00Z",
+    "endTime": "2025-05-20T14:45:00Z",
+    "room": "Hall E",
+    "description": "Develop AI systems with fairness and ethics in mind."
+  },
+  {
+    "id": "s20",
+    "title": "Docker Best Practices",
+    "speaker": "Mark Thompson",
+    "track": "DevOps",
+    "startTime": "2025-05-20T14:00:00.00Z",
+    "endTime": "2025-05-20T14:45:00Z",
+    "room": "Hall D",
+    "description": "Containerize applications efficiently with Docker."
+  }
+]
