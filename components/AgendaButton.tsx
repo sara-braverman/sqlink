@@ -8,10 +8,12 @@ interface AgendaButtonProps {
 
 export default function AgendaButton({ sessionId }: AgendaButtonProps): JSX.Element {
   const [isInAgenda, setIsInAgenda] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect((): void => {
     const agenda: string[] = JSON.parse(localStorage.getItem('agenda') || '[]');
     setIsInAgenda(agenda.includes(sessionId));
+    setIsLoading(false);
   }, [sessionId]);
 
   const toggleAgenda = (): void => {
@@ -26,6 +28,17 @@ export default function AgendaButton({ sessionId }: AgendaButtonProps): JSX.Elem
       setIsInAgenda(true);
     }
   };
+
+  if (isLoading) {
+    return (
+      <button
+        disabled
+        className="px-6 py-3 rounded-lg font-semibold bg-gray-300 text-gray-600 cursor-not-allowed"
+      >
+        Loading...
+      </button>
+    );
+  }
 
   return (
     <button
