@@ -8,6 +8,7 @@ interface AgendaListProps {
   sessions: Session[];
 }
 
+// Checks if session has time conflicts
 function hasTimeConflict(session: Session, otherSessions: Session[]): boolean {
   const start = new Date(session.startTime).getTime();
   const end = new Date(session.endTime).getTime();
@@ -20,6 +21,7 @@ function hasTimeConflict(session: Session, otherSessions: Session[]): boolean {
   });
 }
 
+// Displays user's agenda with conflict warnings
 export default function AgendaList({ sessions }: AgendaListProps): JSX.Element {
   const [agendaSessions, setAgendaSessions] = useState<Session[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

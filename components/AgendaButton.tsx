@@ -6,6 +6,7 @@ interface AgendaButtonProps {
   sessionId: string;
 }
 
+// Button to add/remove sessions from agenda (localStorage)
 export default function AgendaButton({ sessionId }: AgendaButtonProps): JSX.Element {
   const [isInAgenda, setIsInAgenda] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -16,6 +17,7 @@ export default function AgendaButton({ sessionId }: AgendaButtonProps): JSX.Elem
     setIsLoading(false);
   }, [sessionId]);
 
+  // Toggles session in/out of agenda
   const toggleAgenda = (): void => {
     const agenda: string[] = JSON.parse(localStorage.getItem('agenda') || '[]');
     if (isInAgenda) {

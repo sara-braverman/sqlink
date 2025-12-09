@@ -3,6 +3,7 @@ import { getSessions } from '@/lib/sessions';
 import Link from 'next/link';
 import { Session } from '@/types/session';
 
+// Agenda page - Server Component
 export default function AgendaPage(): JSX.Element {
   const sessions: Session[] = getSessions();
 

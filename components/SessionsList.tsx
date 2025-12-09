@@ -9,6 +9,7 @@ interface SessionsListProps {
   sessions: Session[];
 }
 
+// Determines time of day from start time
 function getTimeOfDay(startTime: string): 'morning' | 'afternoon' | 'evening' {
   const hour = new Date(startTime).getHours();
   if (hour >= 9 && hour < 12) return 'morning';
@@ -16,6 +17,7 @@ function getTimeOfDay(startTime: string): 'morning' | 'afternoon' | 'evening' {
   return 'evening';
 }
 
+// Sessions list with client-side filters and search
 export default function SessionsList({ sessions }: SessionsListProps): JSX.Element {
   const [selectedTrack, setSelectedTrack] = useState<string>('');
   const [selectedTime, setSelectedTime] = useState<string>('');

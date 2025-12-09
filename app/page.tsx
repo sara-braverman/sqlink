@@ -3,6 +3,7 @@ import SessionsList from '@/components/SessionsList';
 import { Session } from '@/types/session';
 import Link from 'next/link';
 
+// Home page - Server Component
 export default function Home(): JSX.Element {
   const sessions: Session[] = getSessions();
 

@@ -8,6 +8,7 @@ interface SessionFiltersProps {
   onTimeChange: (time: string) => void;
 }
 
+// Filter buttons for track and time selection
 export default function SessionFilters({
   tracks,
   selectedTrack,

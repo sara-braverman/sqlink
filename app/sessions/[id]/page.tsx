@@ -4,11 +4,13 @@ import Link from 'next/link';
 import AgendaButton from '@/components/AgendaButton';
 import { Session } from '@/types/session';
 
+// Generates static paths for all sessions
 export function generateStaticParams(): { id: string }[] {
   const sessions: Session[] = getSessions();
   return sessions.map((session: Session): { id: string } => ({ id: session.id }));
 }
 
+// Session detail page - Server Component
 export default function SessionPage({ params }: { params: { id: string } }): JSX.Element {
   const session: Session | undefined = getSessionById(params.id);
 
