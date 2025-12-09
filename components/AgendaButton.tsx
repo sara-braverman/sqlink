@@ -6,18 +6,18 @@ interface AgendaButtonProps {
   sessionId: string;
 }
 
-export default function AgendaButton({ sessionId }: AgendaButtonProps) {
-  const [isInAgenda, setIsInAgenda] = useState(false);
+export default function AgendaButton({ sessionId }: AgendaButtonProps): JSX.Element {
+  const [isInAgenda, setIsInAgenda] = useState<boolean>(false);
 
-  useEffect(() => {
-    const agenda = JSON.parse(localStorage.getItem('agenda') || '[]');
+  useEffect((): void => {
+    const agenda: string[] = JSON.parse(localStorage.getItem('agenda') || '[]');
     setIsInAgenda(agenda.includes(sessionId));
   }, [sessionId]);
 
-  const toggleAgenda = () => {
-    const agenda = JSON.parse(localStorage.getItem('agenda') || '[]');
+  const toggleAgenda = (): void => {
+    const agenda: string[] = JSON.parse(localStorage.getItem('agenda') || '[]');
     if (isInAgenda) {
-      const updated = agenda.filter((id: string) => id !== sessionId);
+      const updated: string[] = agenda.filter((id: string): boolean => id !== sessionId);
       localStorage.setItem('agenda', JSON.stringify(updated));
       setIsInAgenda(false);
     } else {

@@ -9,25 +9,25 @@ interface SessionsListProps {
   sessions: Session[];
 }
 
-function getTimeOfDay(startTime: string): string {
+function getTimeOfDay(startTime: string): 'morning' | 'afternoon' | 'evening' {
   const hour = new Date(startTime).getHours();
   if (hour >= 9 && hour < 12) return 'morning';
   if (hour >= 12 && hour < 17) return 'afternoon';
   return 'evening';
 }
 
-export default function SessionsList({ sessions }: SessionsListProps) {
-  const [selectedTrack, setSelectedTrack] = useState('');
-  const [selectedTime, setSelectedTime] = useState('');
-  const [searchQuery, setSearchQuery] = useState('');
+export default function SessionsList({ sessions }: SessionsListProps): JSX.Element {
+  const [selectedTrack, setSelectedTrack] = useState<string>('');
+  const [selectedTime, setSelectedTime] = useState<string>('');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const tracks = Array.from(new Set(sessions.map((s) => s.track)));
+  const tracks: string[] = Array.from(new Set(sessions.map((s: Session): string => s.track)));
 
-  const filteredSessions = sessions.filter((session) => {
+  const filteredSessions: Session[] = sessions.filter((session: Session): boolean => {
     if (selectedTrack && session.track !== selectedTrack) return false;
     if (selectedTime && getTimeOfDay(session.startTime) !== selectedTime) return false;
     if (searchQuery) {
-      const query = searchQuery.toLowerCase();
+      const query: string = searchQuery.toLowerCase();
       return session.title.toLowerCase().includes(query) || session.speaker.toLowerCase().includes(query);
     }
     return true;

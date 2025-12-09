@@ -20,13 +20,13 @@ function hasTimeConflict(session: Session, otherSessions: Session[]): boolean {
   });
 }
 
-export default function AgendaList({ sessions }: AgendaListProps) {
+export default function AgendaList({ sessions }: AgendaListProps): JSX.Element {
   const [agendaSessions, setAgendaSessions] = useState<Session[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    const agendaIds = JSON.parse(localStorage.getItem('agenda') || '[]');
-    const filtered = sessions.filter((s) => agendaIds.includes(s.id));
+  useEffect((): void => {
+    const agendaIds: string[] = JSON.parse(localStorage.getItem('agenda') || '[]');
+    const filtered: Session[] = sessions.filter((s: Session): boolean => agendaIds.includes(s.id));
     setAgendaSessions(filtered);
     setLoading(false);
   }, [sessions]);
@@ -41,8 +41,8 @@ export default function AgendaList({ sessions }: AgendaListProps) {
 
   return (
     <div className="grid gap-4">
-      {agendaSessions.map((session) => {
-        const hasConflict = hasTimeConflict(session, agendaSessions);
+      {agendaSessions.map((session: Session): JSX.Element => {
+        const hasConflict: boolean = hasTimeConflict(session, agendaSessions);
         return (
           <Link
             key={session.id}

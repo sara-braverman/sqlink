@@ -2,14 +2,15 @@ import { getSessionById, getSessions } from '@/lib/sessions';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AgendaButton from '@/components/AgendaButton';
+import { Session } from '@/types/session';
 
-export function generateStaticParams() {
-  const sessions = getSessions();
-  return sessions.map((session) => ({ id: session.id }));
+export function generateStaticParams(): { id: string }[] {
+  const sessions: Session[] = getSessions();
+  return sessions.map((session: Session): { id: string } => ({ id: session.id }));
 }
 
-export default function SessionPage({ params }: { params: { id: string } }) {
-  const session = getSessionById(params.id);
+export default function SessionPage({ params }: { params: { id: string } }): JSX.Element {
+  const session: Session | undefined = getSessionById(params.id);
 
   if (!session) {
     notFound();

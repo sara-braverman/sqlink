@@ -1,9 +1,10 @@
 import AgendaList from '@/components/AgendaList';
 import { getSessions } from '@/lib/sessions';
 import Link from 'next/link';
+import { Session } from '@/types/session';
 
-export default function AgendaPage() {
-  const sessions = getSessions();
+export default function AgendaPage(): JSX.Element {
+  const sessions: Session[] = getSessions();
 
   return (
     <main className="min-h-screen p-8">

@@ -14,7 +14,7 @@ export default function SessionFilters({
   selectedTime,
   onTrackChange,
   onTimeChange,
-}: SessionFiltersProps) {
+}: SessionFiltersProps): JSX.Element {
   return (
     <div className="flex gap-4 mb-6">
       <select
@@ -23,7 +23,7 @@ export default function SessionFilters({
         className="px-4 py-2 border rounded-lg"
       >
         <option value="">All Tracks</option>
-        {tracks.map((track) => (
+        {tracks.map((track: string): JSX.Element => (
           <option key={track} value={track}>
             {track}
           </option>
