@@ -18,9 +18,14 @@ export default function SessionPage({ params }: { params: { id: string } }): JSX
 
   return (
     <main className="min-h-screen p-8">
-      <Link href="/" className="text-blue-600 hover:underline mb-4 inline-block">
-        ← Back to Sessions
-      </Link>
+      <div className="flex flex-wrap justify-between items-center gap-4 mb-4">
+        <Link href="/" className="text-blue-600 hover:underline">
+          ← Back to Sessions
+        </Link>
+        <Link href="/agenda" className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold">
+          My Agenda
+        </Link>
+      </div>
       <div className="max-w-3xl">
         <div className="flex items-center gap-3 mb-4">
           <h1 className="text-4xl font-bold">{session.title}</h1>
