@@ -86,7 +86,6 @@ All session data is loaded on the **server** using Server Components:
 2. **Session Detail Page** (`/app/sessions/[id]/page.tsx`)
    - **Why Server:** Fetches individual session data on the server
    - **Data:** Calls `getSessionById()` for dynamic route
-   - **Static Generation:** Uses `generateStaticParams()` for pre-rendering
 
 3. **Agenda Page** (`/app/agenda/page.tsx`)
    - **Why Server:** Fetches all sessions on the server
@@ -106,17 +105,13 @@ All session data is loaded on the **server** using Server Components:
      - **Data Already Available:** Since all sessions are fetched once on the server, client-side filtering is efficient
      - **State Management:** React useState hooks manage filter state locally, making the UI highly responsive
 
-2. **SessionFilters** (`/components/SessionFilters.tsx`)
-   - **Why Client:** Handles user input for dropdown selections
-   - **Interactivity:** onChange events for track and time filters
-
-3. **AgendaList** (`/components/AgendaList.tsx`)
+2. **AgendaList** (`/components/AgendaList.tsx`)
    - **Why Client:** Reads from localStorage to filter user's agenda
    - **State:** Agenda sessions, loading state (useState)
    - **Effect:** useEffect to read localStorage on mount
    - **Receives:** All sessions from server, filters client-side
 
-4. **AgendaButton** (`/components/AgendaButton.tsx`)
+3. **AgendaButton** (`/components/AgendaButton.tsx`)
    - **Why Client:** Manages localStorage for add/remove functionality
    - **State:** isInAgenda (useState)
    - **Effect:** useEffect to sync with localStorage
@@ -169,7 +164,6 @@ With more time, the following enhancements would be implemented:
 
 - **Calendar Export:** Export agenda to iCal/Google Calendar
 - **Email Reminders:** Send notifications before sessions start
-- **Session Recommendations:** AI-powered session suggestions based on interests
 
 ## Development Notes
 
