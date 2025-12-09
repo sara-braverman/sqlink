@@ -1,6 +1,7 @@
 import { getSessionById, getSessions } from '@/lib/sessions';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import AgendaButton from '@/components/AgendaButton';
 
 export function generateStaticParams() {
   const sessions = getSessions();
@@ -26,7 +27,8 @@ export default function SessionPage({ params }: { params: { id: string } }) {
             {session.track}
           </span>
         </div>
-        <div className="space-y-4 text-lg">
+        <AgendaButton sessionId={session.id} />
+        <div className="space-y-4 text-lg mt-6">
           <p><strong>Speaker:</strong> {session.speaker}</p>
           <p><strong>Room:</strong> {session.room}</p>
           <p>
